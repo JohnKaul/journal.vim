@@ -1,5 +1,5 @@
 *journal.txt*
-Last Updated: 04.02.18 9:14:21 AM
+Last Updated: 04.02.18 11:52:24 AM
 
 ==============================================================================
 CONTENTS                                                  *journal-contents*
@@ -17,6 +17,27 @@ CONTENTS                                                  *journal-contents*
 ===-----------------------------------X------------------------------------===
 1. Intro                                                       *journal-Intro*
 
+TODO entry syntax:
+[-] Test Bug        #design   @jdoe  ^3 &11.09.18         %done
+       ^              ^        ^     ^   ^                  ^
+       |              |        |     |   |                  |
+       |              |        |     |   |                  +----- Status
+       |              |        |     |   +------------------------ Date/Milestone
+       |              |        |     +---------------------------- Priority/Cost
+       |              |        +---------------------------------- Assignment
+       |              +------------------------------------------- Tag
+       +---------------------------------------------------------- Label
+
+This plugin will not only allow you to mark items complete or not but will
+give you generic searching abilities as well; this is a recursive search
+from the files current directory. So if files under the current directory
+all had TODO items in them these searches will show those entries as well
+(imagine a programs directory where TODOs from all source files in--or
+under--the current directory is shown.
+
+Each TODO entry also supports many different "tags" as well, which can also
+be searched-. 
+
 ===-----------------------------------X------------------------------------===
 2. Functionality provided                              *journal-Functionality*
 
@@ -28,17 +49,26 @@ CONTENTS                                                  *journal-contents*
 2.1.2   Normal and Visual mode mappings                          *journal-map*
 
 2.1.3   Normal mode mappings                                     *journal-map*
-        <Ctr-Space>.............................................|MarkComplete|
-        <Ctrl-]>........................................................|ToDo|
+        <Ctr-Space>.............................................|CheckOffItem|
+        <Ctrl-]>.....................................|journal-GlobalFunctions|
 
 ===-----------------------------------X------------------------------------===
 2.2  Global Functions                                *journal-GlobalFunctions*
 These functions are callable from the command line.
 
 ------------------------------------------------------------------------------
+Todo(day, ...)                                                          *Todo*
+Searches the DATE tag for specified function arguments (forward/back in
+time).
 
 <
 ------------------------------------------------------------------------------
+TodoTag(tag, ...)                                                    *TodoTag*
+Searches for specified tag.
+
+<
+------------------------------------------------------------------------------
+
 
 ===-----------------------------------X------------------------------------===
 2.3 Local Functions                                   *journal-LocalFunctions*
@@ -46,7 +76,8 @@ These functions are internal only (not callable from the command
 line).
 
 ------------------------------------------------------------------------------
-MarkComplete()                                                  *MarkComplete*
+CheckOffItem()                                                  *CheckOffItem*
+This function will simply toggle an 'X' at the beginning of the TODO item.
 
 <
 ------------------------------------------------------------------------------
