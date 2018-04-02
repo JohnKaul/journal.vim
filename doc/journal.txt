@@ -1,0 +1,52 @@
+*journal.txt*
+Last Updated: 04.02.18 9:14:21 AM
+
+==============================================================================
+CONTENTS                                                  *journal-contents*
+
+    1.Intro....................................................|journal-Intro|
+    2.Functionality provided...........................|journal-Functionality|
+        2.1 Global mappings...........................|journal-GLobalMappings|
+                2.1.1 Insert mode mappings..................|journal-inoremap|
+                2.1.2 Normal and Visual mapings..................|journal-map|
+                2.1.3 Normal mappings...........................|journal-nmap|
+        2.2 Global Functions ........................|journal-GlobalFunctions|
+        2.2 Local Commands ..........................|journal-GlobalFunctions|
+
+
+===-----------------------------------X------------------------------------===
+1. Intro                                                       *journal-Intro*
+
+===-----------------------------------X------------------------------------===
+2. Functionality provided                              *journal-Functionality*
+
+===-----------------------------------X------------------------------------===
+2.1  Global Mappings                                  *journal-GlobalMappings*
+
+2.1.1   Insert mode mappings                                *journal-inoremap*
+
+2.1.2   Normal and Visual mode mappings                          *journal-map*
+
+2.1.3   Normal mode mappings                                     *journal-map*
+        <Ctr-Space>.............................................|MarkComplete|
+        <Ctrl-]>........................................................|ToDo|
+
+===-----------------------------------X------------------------------------===
+2.2  Global Functions                                *journal-GlobalFunctions*
+These functions are callable from the command line.
+
+------------------------------------------------------------------------------
+
+<
+------------------------------------------------------------------------------
+
+===-----------------------------------X------------------------------------===
+2.3 Local Functions                                   *journal-LocalFunctions*
+These functions are internal only (not callable from the command
+line).
+
+------------------------------------------------------------------------------
+MarkComplete()                                                  *MarkComplete*
+
+<
+------------------------------------------------------------------------------
